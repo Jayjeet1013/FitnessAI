@@ -14,7 +14,8 @@ General Inquiries: Ask any other questions or get information not covered above.
 Feel free to type your question if you don't see what you're looking for. I'm here to ensure your experience with HeadstartAI is smooth and effective!   `;
 
 export async function POST(req) {
-  const openai = new OpenAI();
+  const openai = new OpenAI({ apiKey: "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" });
+
   const data = await req.json();
 
   const completion = await openai.chat.completions.create({
