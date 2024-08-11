@@ -4,7 +4,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const systemPrompt = (userMessage) => `
 Welcome to Fitness AI Support!
 
-I'm here to help you with various health-related calculations and provide insights into your fitness journey. Whether you're looking to calculate your BMI, track your daily calorie intake, or get personalized health advice, I've got you covered. Please choose one of the following options or type your request directly:
+
+I am a Fitness AI  to help you with various health-related calculations and provide insights into your fitness journey. Whether you're looking to calculate your BMI, track your daily calorie intake, or get personalized health advice, I've got you covered. Please choose one of the following options or type your request directly:
 
 - BMI Calculation: Calculate your Body Mass Index and understand your health status.
 - Calorie Tracker: Get guidance on how many calories you should consume daily.

@@ -28,11 +28,11 @@ export default function Home() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const colors = {
-    background: "#F5F5F5",
-    assistant: "#3B5998",
-    user: "#FF6F61",
-    text: "#FFFFFF",
-    button: "#3B5998",
+    background: "#e0f2f1", // Light green background for the chat box
+    assistant: "#00796b", // Darker green for assistant messages
+    user: "#004d40", // Even darker green for user messages
+    text: "#FFFFFF", // White text
+    button: "#004d40", // Button color
   };
 
   const sendMessage = async () => {
@@ -108,7 +108,12 @@ export default function Home() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      bgcolor={colors.background}
+      sx={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
@@ -118,18 +123,20 @@ export default function Home() {
       >
         <Box
           sx={{
-            backgroundColor: colors.assistant,
+            backgroundColor: "#004d40", // Solid dark green for header
             borderRadius: "12px",
             padding: "20px",
             marginBottom: "20px",
             textAlign: "center",
+            boxShadow: 3,
           }}
         >
           <h1 style={{ color: colors.text, marginBottom: "10px" }}>
             Fitness AI Support
           </h1>
           <p style={{ color: colors.text }}>
-            Welcome to the Fitness AI support service. How can we assist you with your health today?
+            Welcome to the Fitness AI support service. How can we assist you
+            with your health today?
           </p>
         </Box>
         <Stack
@@ -144,6 +151,7 @@ export default function Home() {
           sx={{
             backgroundColor: colors.background,
             overflow: "hidden",
+            boxShadow: 3,
           }}
         >
           <Stack
